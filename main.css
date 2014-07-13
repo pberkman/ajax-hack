@@ -3,43 +3,92 @@ body {
 	text-align: center;
 }
 .header-container {
-	margin-bottom:20px;
+	position: relative;
+	padding:0;
+	margin-top:20px;
+	height:200px;
+}
+.logo {
+	display: inline-block;
+}
+ .continent {
+ 	position: relative;
+ 	height:110px;
+ 	width:110px;
+ 	display:inline-block;
+ 	border-radius:50%;
+ 	background-color: blue;
+ 	top:-90px;
+ 	margin:10px;
+ 	line-height: 100px;
+ 	font-family: georgia, sans-serif;
+ 	font-size:1.2em;
+ 	color:white;
+ }
+ span {
+ 	vertical-align: middle;
+ 	line-height: normal;
+ }
+ .africa {
+ 	background-color:#8ddf00;
+ }
+ .antarctica {
+ 	background-color:#00b80e
+ }
+ .asia {
+ 	background-color:#00ffb0
+ }
+ .australia {
+ 	background-color:#22baa5;
+ }
+ .europe {
+ 	background-color:#008fff;
+ }
+ .northAmerica {
+ 	background-color:#085DAD;
+ 	font-size: 1em;
+ }
+ .southAmerica {
+ 	background-color:#061d54;
+	font-size: 1em;
+ }
+.instruct-container {
+	background-color:rgba(192,192,192,0.5);
 }
 p {
-	display: inline-block;
-	position: relative;
 	font-family:georgia, sans-serif;
 	width:25%;
-	margin:0 70px 0 70px;
-	font-size:2em;
+	font-size:1em;
+}
+form, p {
+	position: relative;
+	display: inline-block;
+	margin: 5px 20px 5px 20px;
+	vertical-align: middle;
 }
 input {
 	width:300px;
 }
- .continent-wrapper div {
- 	height:75px;
- 	width:75px;
- 	margin:20px 40px 20px 20px;
- 	display:inline-block;
- 	border-radius:50%;
- 	background-color: blue;
- }
-
  .gallery-wrapper {
- 	margin-top: 20px;
+ 	padding-top:10px;
+ 	background-color:gray;
  }
 
 .imageWrapper {
 	position: relative;
 	width:14%;
 	display:inline-block;
+	margin:1%;
 }
  .imageWrapper img {
  	width:100%;
- 	margin:1%;
+	border-radius:5px;
+	box-shadow: 10px 10px 5px #000000;
+ 	
  }
 .location {
 	position: absolute;
 	bottom:5px;
-	text-align: center
+	padding-left:5px;
+	color:white;
 }
