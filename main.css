@@ -70,7 +70,7 @@ input {
 	width:300px;
 }
  .gallery-wrapper {
- 	padding-top:10px;
+ 	padding:10px 10px;
  	background-color:gray;
  }
 
