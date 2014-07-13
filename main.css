@@ -1,0 +1,45 @@
+body {
+	margin:0 auto;
+	text-align: center;
+}
+.header-container {
+	margin-bottom:20px;
+}
+p {
+	display: inline-block;
+	position: relative;
+	font-family:georgia, sans-serif;
+	width:25%;
+	margin:0 70px 0 70px;
+	font-size:2em;
+}
+input {
+	width:300px;
+}
+ .continent-wrapper div {
+ 	height:75px;
+ 	width:75px;
+ 	margin:20px 40px 20px 20px;
+ 	display:inline-block;
+ 	border-radius:50%;
+ 	background-color: blue;
+ }
+
+ .gallery-wrapper {
+ 	margin-top: 20px;
+ }
+
+.imageWrapper {
+	position: relative;
+	width:14%;
+	display:inline-block;
+}
+ .imageWrapper img {
+ 	width:100%;
+ 	margin:1%;
+ }
+.location {
+	position: absolute;
+	bottom:5px;
+	text-align: center
+}
