@@ -9,9 +9,13 @@ $(document).ready(function() {
 }); //end ready	
 
 var searchWorld = function(hashtag) {
-		
+		var parameters={
+			type:"images"
+		};
+
 		var getPhotos = $.ajax ({
 			url:"https://api.instagram.com/v1/media/popular?client_id=920d83e2718741b885af9d6323a498b4",
+			data:parameters,
 			dataType:"jsonp",
 			type:"GET"
 		})
