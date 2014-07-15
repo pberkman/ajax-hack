@@ -1,4 +1,4 @@
- $(document).ready(function() {
+/* $(document).ready(function() {
 	$("form").submit(function (evt) {
 		evt.preventDefault();
 		// clear the gallery before a submit
@@ -35,9 +35,9 @@ var searchWorld = function(hashtag) {
 			$(".gallery-wrapper").html(results);
 		});
 };
+*/
 
 
-/*
 $(document).ready(function() {
 
 $("form").submit(function(evt) {
@@ -46,7 +46,27 @@ $("form").submit(function(evt) {
 	var submitButton = $("#submit");
 
 	//URL for getJSON
-	var instagramAPI = "https://api.instagram.com/v1/media/search?lat=48.858844&lng=2.294351&client_id=920d83e2718741b885af9d6323a498b4?jsoncallback=?";
-});
-}); //end ready
-*/
+	var instagramAPI = "https://api.instagram.com/v1/media/search?client_id=920d83e2718741b885af9d6323a498b4";
+	var hashtag = $searchField.val();
+	//data for JSON
+	var instagramOptions = {
+		tags:hashtag,
+		lat:48.858844,
+		lng:2.294351,
+		format:"json"
+	};
+
+	//callback for getJson
+	function displayPhotos(data) {
+		var photoHTML = '<div class="gallery-wrapper">';
+		$.each(data.data, function(i, photo) {
+			photoHTML += '<div class="imageWrapper">';
+			photoHTML += '<img src"' + photo.images + '"/>';
+			photoHTML += '<div class="location"' + photo.location.name + '</div></div>';
+		});
+		photoHTML += '</div>';
+		$(".gallery-wrapper").html(photoHTML);
+	}
+	$.getJSON(instagramAPI, instagramOptions, displayPhotos);
+}); // end form submit
+}); // end ready
