@@ -4,15 +4,15 @@
 	<meta charset="UTF-8">
 	<title>#AroundTheWorld</title>
 	<link type="text/css" rel="stylesheet" href="main.css"/>
-	<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
-	<script type="text/javascript" src="app.js"></script>
+	<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+	<script src="app.js"></script>
 </head>
 <body>
 	<div class="header-container">
 		<img class="logo" src="Images/grid.png"/>
 		<div class="city tokyo"><span>Tokyo</span></div>
-		<div class="city jakarta">Jakarta</div>
-		<div class="city seoul">Seoul</div>
+		<div class="city sydney">Sydney</div>
+		<div class="city london">London</div>
 		<div class="city mumbai">Mumbai</div>
 		<div class="city paris">Paris</div>
 		<div class="city newYork">New York</div>
@@ -21,8 +21,8 @@
 	<div class="instruct-container">
 		<p>Insert your favorite hashtag to see where else the tag was used!</p>
 		<form>
-			<input type="text" placeholder="Insert tag here" name="tags" autofocus required/>
-			<br><input type="submit" class="button"/>
+			<input type="text" placeholder="Insert tag here" id="search" name="tags" autofocus required/>
+			<br><input type="submit" class="button" id="submit"/>
 		</form>
 		<p>Click on a city above to see #'s Around the World!</p>
 	</div>
