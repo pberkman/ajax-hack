@@ -30,6 +30,9 @@ body {
  	vertical-align: middle;
  	line-height: normal;
  }
+ .city:hover {
+ 	border: 2px solid gray;
+ }
  .tokyo {
  	background-color:#8ddf00;
  }
