@@ -1,4 +1,4 @@
-/* $(document).ready(function() {
+ $(document).ready(function() {
 	$("form").submit(function (evt) {
 		evt.preventDefault();
 		// clear the gallery before a submit
@@ -35,7 +35,7 @@ var searchWorld = function(hashtag) {
 			$(".gallery-wrapper").html(results);
 		});
 };
-*/
+/*
 
 
 $(document).ready(function() {
@@ -46,7 +46,8 @@ $("form").submit(function(evt) {
 	var submitButton = $("#submit");
 
 	//URL for getJSON
-	var instagramAPI = "https://api.instagram.com/v1/media/search?client_id=920d83e2718741b885af9d6323a498b4?jsoncallback=";
+	var instagramAPI = "https://api.instagram.com/v1/media/search?client_id=920d83e2718741b885af9d6323a498b4";
+	
 	var hashtag = $searchField.val();
 	//data for JSON
 	var instagramOptions = {
@@ -70,4 +71,4 @@ $("form").submit(function(evt) {
 	}
 	$.getJSON(instagramAPI, instagramOptions, displayPhotos);
 }); // end form submit
-}); // end ready
+}); // end ready */
