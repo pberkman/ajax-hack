@@ -51,9 +51,10 @@ $("form").submit(function(evt) {
 	//data for JSON
 	var instagramOptions = {
 		tags:hashtag,
-		lat:48.858844,
+		lat:48.85544,
 		lng:2.294351,
-		format:"json"
+		format:"json",
+		distance:5000
 	};
 
 	//callback for getJson
