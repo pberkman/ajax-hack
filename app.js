@@ -46,7 +46,7 @@ $("form").submit(function(evt) {
 	var submitButton = $("#submit");
 
 	//URL for getJSON
-	var instagramAPI = "https://api.instagram.com/v1/media/search?client_id=920d83e2718741b885af9d6323a498b4";
+	var instagramAPI = "https://api.instagram.com/v1/media/search?client_id=920d83e2718741b885af9d6323a498b4?jsoncallback=";
 	var hashtag = $searchField.val();
 	//data for JSON
 	var instagramOptions = {
