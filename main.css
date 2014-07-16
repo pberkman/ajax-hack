@@ -89,6 +89,7 @@ input {
 }
  .imageWrapper img {
  	width:100%;
+
 	border-radius:5px;
 	box-shadow: 10px 10px 5px #000000;
  }
@@ -96,5 +97,5 @@ input {
 	position: absolute;
 	bottom:5px;
 	padding-left:5px;
-	color:white;
+	color:gray;
 }

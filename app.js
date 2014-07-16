@@ -10,35 +10,33 @@
 
 var searchWorld = function(hashtag) {
 		var parameters={
-			lat:37,
-			lng:-122,
+			lat:40,
+			lng:74,
 			distance:5000
 		};
 
 		var getPhotos = $.ajax ({
 			url:"https://api.instagram.com/v1/media/search?client_id=920d83e2718741b885af9d6323a498b4",
 			data:parameters,
-
 			dataType:"jsonp",
 			type:"GET"
 		})
 		.done(function(getPhotos) {
-
-			var results='<div class="gallery-wrapper">';
-			
+			var results = '<div class="gallery-wrapper">';
 			$.each(getPhotos.data, function(index, photo) {
-				results += '<div class="imageWrapper">';
-				results += '<img src="' + photo.images.thumbnail.url + '"/>';
-				//results += '<div class="location"' + photo.location.name + '</div';
-				results += '</div>';
+					results += '<div class="imageWrapper">';
+					results += '<img src="' + photo.images.thumbnail.url + '"/>';
+					if (photo.location.name !== undefined) {
+					results += '<div class="location">' + photo.location.name + '</div>';
+					}
+					results += '</div>';
 			});
 			results += '</div>';
-			$(".gallery-wrapper").html(results);
+			$(".gallery").html(results);
 		});
 };
+
 /*
-
-
 $(document).ready(function() {
 
 $("form").submit(function(evt) {
@@ -64,8 +62,8 @@ $("form").submit(function(evt) {
 		var photoHTML = '<div class="gallery-wrapper">';
 		$.each(data.data, function(i, photo) {
 			photoHTML += '<div class="imageWrapper">';
-			photoHTML += '<img src"' + photo.images + '"/>';
-			photoHTML += '<div class="location"' + photo.location.name + '</div></div>';
+			photoHTML += '<img src="' + photo.images.thumbnail.url + '"/></div>';
+			//photoHTML += '<div class="location"' + photo.location.name + '</div></div>';
 		});
 		photoHTML += '</div>';
 		$(".gallery-wrapper").html(photoHTML);
