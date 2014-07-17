@@ -4,14 +4,17 @@
 		// clear the gallery before a submit
 		$(".gallery-wrapper").html("");
 		var hashtag=$("#search").val();
+		
 		searchWorld(hashtag);
 	}); //end submit
 }); //end ready	
 
 var searchWorld = function(hashtag) {
+	var latitude=$("#lat").val();
+	var longitude=$("#long").val();
 		var parameters={
-			lat:40,
-			lng:74,
+			lat:latitude,
+			lng:longitude,
 			distance:5000
 		};
 
